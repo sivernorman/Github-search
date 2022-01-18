@@ -3,7 +3,8 @@ By silver Norman
 # Description
 This a git hub search API where user is able to search github user name and repositories.
 
-Live Page
+# Live Page
+ 
  
 # Development server
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
@@ -19,7 +20,7 @@ Open Terminal {Ctrl+Alt+T}
 
 git clone http 
 
-cd KGit-SearchApi
+cd Github-SearchApi
 
 code . or atom . based on the text editor you have.
 
@@ -27,3 +28,4 @@ code . or atom . based on the text editor you have.
 HTML5
 CSS
 [AngulerCLI]
+Boostrap
