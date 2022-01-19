@@ -12,18 +12,12 @@ export class SearchUserComponent implements OnInit {
 public userInput!:string
 public userProfile:any
 gitUser:UserProfile|any;
-repo:Repo |any;
+repos:Repo |any;
+userName:any=''
   constructor(private getgit:ServceService,public sericeRepo:RepoService) { }
 
   getSearchUser(searchTerm:any){
-    // this.getgit.searchUser(searchTerm).then((data)=>{
-    //   this.gitUser= this.getgit.gitUser;
-    //   console.log(data);
-      
-    // },(error)=>console.log(error)
-    
-    // );
-    this.getgit.searchUser(searchTerm).subscribe(
+     this.getgit.searchUser(searchTerm).subscribe(
       (success)=>{
         this.gitUser=success
         console.log(this.gitUser)
@@ -34,9 +28,9 @@ repo:Repo |any;
 
     this.sericeRepo.getRepo(searchTerm).subscribe(
       (success)=>{
-        this.repo=success
-        console.log(this.repo)
-        return(this.repo)
+        // this.repos=success
+        // console.log(this.repos)
+        return(this.repos)
       }
     )
   }
@@ -44,5 +38,21 @@ repo:Repo |any;
   ngOnInit(): void {
     this.getSearchUser('sivernorman')
    }
+getUserName(){
+  // alert( this.userName)
+  this.sendUserName()
+  this.showRepos()
+  console.log(this.repos);
 
+}
+sendUserName(){
+  this.getgit.getRepos(this.userName)
+  this.showRepos()
+  
+}
+showRepos(){
+  this.getgit.getRepositories().subscribe((data)=>{
+    this.repos=data
+  })
+}
 }
