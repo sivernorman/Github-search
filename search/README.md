@@ -21,7 +21,7 @@ Open Terminal {Ctrl+Alt+T}
 
 git clone http 
 
-cd Github-SearchApi
+cd Github-Search
 
 code . or atom . based on the text editor you have.
 
