@@ -42,7 +42,7 @@ getUserName(){
   // alert( this.userName)
   this.sendUserName()
   this.showRepos()
-  console.log(this.repos);
+    console.log();
 
 }
 sendUserName(){
